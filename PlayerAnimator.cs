@@ -39,13 +39,13 @@ public class PlayerAnimator : MonoBehaviour
     public void UpdateStates()
     {
         float normHorizontalSpeed = _playerController.HorizontalVelocity.magnitude / _playerController._movementSettings.MaxHorizontalSpeed;
-		_animator.SetFloat(CharacterAnimatorParamId.HorizontalSpeed, normHorizontalSpeed);
+	_animator.SetFloat(CharacterAnimatorParamId.HorizontalSpeed, normHorizontalSpeed);
 
-		float jumpSpeed = _playerController._movementSettings.JumpSpeed;
-		float normVerticalSpeed = _playerController.VerticalVelocity.y.Remap(-jumpSpeed, jumpSpeed, -1.0f, 1.0f);
-		_animator.SetFloat(CharacterAnimatorParamId.VerticalSpeed, normVerticalSpeed);
+	float jumpSpeed = _playerController._movementSettings.JumpSpeed;
+	float normVerticalSpeed = _playerController.VerticalVelocity.y.Remap(-jumpSpeed, jumpSpeed, -1.0f, 1.0f);
+	_animator.SetFloat(CharacterAnimatorParamId.VerticalSpeed, normVerticalSpeed);
 
-		_animator.SetBool(CharacterAnimatorParamId.IsGrounded, _playerController.IsGrounded);
+	_animator.SetBool(CharacterAnimatorParamId.IsGrounded, _playerController.IsGrounded);
 
     }
 
