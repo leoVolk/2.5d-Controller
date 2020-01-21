@@ -26,7 +26,7 @@ public class CharacterIK
 public class PlayerAnimator : MonoBehaviour
 {
 	public CharacterIK CharacterIK;
-    private Animator _animator;
+    	private Animator _animator;
 	private PlayerController _playerController;
 
 	private void Awake()
